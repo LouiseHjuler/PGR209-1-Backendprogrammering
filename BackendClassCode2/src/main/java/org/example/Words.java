@@ -1,27 +1,30 @@
 package org.example;
-
-import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Words {
-    //method for finding anagrams for
+    //method for finding anagrams for given word
     public ArrayList<String> findAnagrams(String word, ArrayList<String> dictionary) {
+        //arraylist for our results
         ArrayList<String> result = new ArrayList<String>();
-        for (String target:
-             dictionary) {
+        //sorting and comparison
+        for (String target :
+                dictionary) {
             if (target.length() == word.length()) {
-                var alfTarget  = target.toCharArray();
+                //target word from dictionary split to array and sorted
+                var alfTarget = target.toCharArray();
                 Arrays.sort(alfTarget);
+                //same thing for test word
                 var alfWord = word.toCharArray();
                 Arrays.sort(alfWord);
-                if (new String(alfWord).equals(new String(alfTarget)) && !word.equals(target)){
-                result.add(target);
-                System.out.println(target);
+                //Sorted Arrays are converted to strings to be compared, and their original forms put in result array, IF they arent the test word
+                if (new String(alfWord).equals(new String(alfTarget)) && !word.equals(target)) {
+                    result.add(target);
+                    System.out.println(target);
                 }
             }
         }
-
+        //if target word and test word are not the same, we return empty result
         return result;
     }
 }
