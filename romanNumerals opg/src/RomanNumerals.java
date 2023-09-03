@@ -69,8 +69,6 @@ public class RomanNumerals {
                     hundredsResult = "CM";
                 }
             }if (i == inputString.length()-4) {
-                String counter = "";
-
                 if (arrayNumber < 4) {
                     for (int j = 0; j < arrayNumber; j++) {
                         thousandsResult = thousandsResult + "M";
