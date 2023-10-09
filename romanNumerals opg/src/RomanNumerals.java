@@ -7,7 +7,7 @@ public class RomanNumerals {
         String singlesResult = "";
         String tensResult = "";
         String hundredsResult = "";
-        String thousandsResult = "";
+        String thousandsResults = "";
         //convert input to string to get length
         String inputString = String.valueOf(input);
         //creating array of right length
@@ -71,15 +71,15 @@ public class RomanNumerals {
             }if (i == inputString.length()-4) {
                 if (arrayNumber < 4) {
                     for (int j = 0; j < arrayNumber; j++) {
-                        thousandsResult = thousandsResult + "M";
+                        thousandsResults = thousandsResults + "M";
                     }
                 } else if (arrayNumber >= 4){
                     System.out.println("we only calculate roman numerals until 3999 or MMMCMXICIX ");
                 }
             }
         }
-        System.out.println(thousandsResult + hundredsResult + tensResult + singlesResult);
-        return thousandsResult + hundredsResult + tensResult + singlesResult;
+        System.out.println(thousandsResults + hundredsResult + tensResult + singlesResult);
+        return thousandsResults + hundredsResult + tensResult + singlesResult;
     }
 }
 
